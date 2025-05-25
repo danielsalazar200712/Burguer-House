@@ -1,0 +1,282 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #080202;
+    font-family: 'Poppins', sans-serif;
+}
+.horario {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .horario-info h2 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .horario-txt {
+        flex-direction: column;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .social img {
+        margin: 8px 0 0 0;
+    }
+
+    .footer {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links h4 {
+        margin: 25px 0px 10px 0px;
+    }
+    .horario {
+    padding: 100px 0px;
+    background-color: #0d0d0d;
+ }
+
+ .horario-info h2 {
+    font-size: 75px;
+    color: #FFFFFF;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+ }
+
+ .horario-txt {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .txt {
+    color: #FFFFFF;
+ }
+
+ .txt h4 {
+    font-size: 18px;
+    color: #A7A7A7;
+    margin-bottom: 30px;
+ }
+
+ .txt p {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+ }
+
+
+ .map {
+    filter: grayscale(100%) invert(92%) contrast(93%);
+ }
+
+ .footer {
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .links h4 { 
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+ }
+
+ .links ul li a {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+ }
+
+ @media(max-width: 991px) {
+
+    .menu {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .menu-2 {
+        display: none;
+    }
+
+    .logo-1 {
+        width: 100px;
+    }
+
+    .logo-2 {
+        width: 0;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #181818;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header-content {
+        padding: 30px;
+        margin-top: 100px;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
+
+    .slider-txt {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .slider-txt h1 {
+        font-size: 50px;
+    }
+
+    .slider-txt p {
+        font-size: 16px;
+    }
+
+    .btn-1 {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .slider-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .slider-img img {
+        margin-right: 0px;
+        width: 300px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets,.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: -7px;
+    }
+
+    .tabs {
+        padding: 50px 30px;
+    }
+
+    .tabs label {
+        width: 33%;
+    }
+
+    .info {
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .info-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-img img {
+        width: 400px;
+        height: 200px;
+        margin-bottom: 25px;
+    }
+
+    .info-txt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-txt h2 {
+        font-size: 50px;
+    }
+
+    .info-txt p {
+        font-size: 16px;
+    }
+
+    .btn-1 {
+        font-size: 16px;
+    }
+
+    .horario {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .horario-info h2 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .horario-txt {
+        flex-direction: column;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .social img {
+        margin: 8px 0 0 0;
+    }
+
+    .footer {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links h4 {
+        margin: 25px 0px 10px 0px;
+    }
+
+
+
+ }
+ .map {
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+ }
+ @media (max-width: 768px) {
+    
+    .contenedor {
+        flex-direction: column;
+    }
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
