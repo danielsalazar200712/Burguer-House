@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
@@ -42,7 +46,10 @@ body {
 }
 
 .menu {
-    position: absolute;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     top: 20px;
     left: 0;
     right: 0;
@@ -62,6 +69,9 @@ body {
     margin-left: 180px;
     display: flex;
     align-items: center;
+    display: flex !important;
+    justify-content: center;
+
 }
 
 .logo-1 {
@@ -135,7 +145,7 @@ body {
     width: 50%;
 }
 .slider-txt h1 {
-    font-size: 70px;
+    font-size: clamp(30px, 5vw, 70px);
     color: #FFFFFF;
     text-transform: uppercase;
     font-weight: 800;
@@ -173,7 +183,10 @@ body {
 .slider-img img {
     margin-right: 225px;
     width: 550px;
+    max-width: 100%;
+    height: auto;
 }
+
 
 .products {
     background-color: #090909;
@@ -185,6 +198,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 100px 0px;
+    background-color: #030303;
+    text-align: center;
+    text position: absolute;
+
 
 }
 
@@ -226,12 +243,15 @@ body {
 } 
 
 .product {
-    display: flex;
     align-items: center;
     padding: 25px;
     margin: 0 10px;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+
+
 
 .product-img {
     width: 50%;
@@ -259,7 +279,7 @@ body {
  .product-txt {
     width: 50%;
     margin-left: 10px;
-    text-align: left;
+    text-align: center;
  }
 
  .product-txt h4 {
@@ -480,6 +500,10 @@ body {
 
     .tabs label {
         width: 33%;
+        text-align: center;
+        grid-row: 3 px;
+        font-size: 16px;
+
     }
 
     .info {
@@ -554,6 +578,7 @@ body {
     width: 100%;
     height: 400px;
     margin-top: 50px;
+    top: 100px;
  }
  @media (max-width: 768px) {
     
@@ -564,4 +589,11 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+button {
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
 }

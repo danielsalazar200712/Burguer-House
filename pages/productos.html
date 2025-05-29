@@ -6,9 +6,10 @@
     <title>productos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/productos.css">
-    <link rel="icon" type="image/.png" href="images/favicon.png">
+    <link rel="icon" type="image/.png" href="../images/favicon.png">
 </head>
 <body>
+    
     <header>
         <div class="menu container">
             <img class="logo-1" src="../images/logo.svg" alt="">
@@ -23,10 +24,13 @@
                         <li><a href="../pages/productos.html">Productos</a></li>
                         <li><a href="../pages/horarios.html">Horarios</a></li>
                         <li><a href="../pages/ubicacion.html">Ubicación</a></li>
-                        <li><a href="../pages/reseñas.html">reseñas</a></li>
+                        <li><a href="../pages/apreciaciones.html">Apreciaciones</a></li>
                     </ul>
                 </div>
     </header>
+    
+
+
     <main class="products">
         <div class="tabs container">
 
@@ -38,13 +42,12 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>Nuevo</h4>
+                                    <h4><button onclick="agregarAlCarrito(this)">Añadir al carrito</button></h4>
                                     <img src="../images/food1.png" alt="">
                                 </div>
                                 <div class="product-txt">
                                     <h4>Producto</h4>
                                     <p>calidad premium</p>
-                                    <button class="boton añadir"><a href="">añadir al carrito</a></butto>
                                     <span class="price">$80.00</span>
                                 </div>
                             </div>
@@ -52,7 +55,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>Nuevo</h4>
+                                    <h4><button><a href="">añadir al carrito</a></button></h4>
                                     <img src="../images/food2.png" alt="">
                                 </div>
                                 <div class="product-txt">
@@ -65,7 +68,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>Nuevo</h4>
+                                    <h4><button><a href="">añadir al carrito</a></button></h4>
                                     <img src="../images/food3.png" alt="">
                                 </div>
                                 <div class="product-txt">
@@ -90,7 +93,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>Nuevo</h4>
+                                    <h4><button><a href="">añadir al carrito</a></button></h4>
                                     <img src="../images/food4.png" alt="">
                                 </div>
                                 <div class="product-txt">
@@ -103,7 +106,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>Nuevo</h4>
+                                    <h4><button><a href="">añadir al carrito</a></button></h4>
                                     <img src="../images/food5.png" alt="">
                                 </div>
                                 <div class="product-txt">
@@ -116,7 +119,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>Nuevo</h4>
+                                    <h4><button><a href="">añadir al carrito</a></button></h4>
                                     <img src="../images/food6.png" alt="">
                                 </div>
                                 <div class="product-txt">
@@ -140,7 +143,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>Nuevo</h4>
+                                    <h4><button><a href="">añadir al carrito</a></button></h4>
                                     <img src="../images/food7.png" alt="">
                                 </div>
                                 <div class="product-txt">
@@ -153,7 +156,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>Nuevo</h4>
+                                    <h4><button><a href="">añadir al carrito</a></button></h4>
                                     <img src="../images/food8.png" alt="">
                                 </div>
                                 <div class="product-txt">
@@ -166,7 +169,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4>Nuevo</h4>
+                                    <h4><button><a href="">añadir al carrito</a></button></h4>
                                     <img src="../images/food9.png" alt="">
                                 </div>
                                 <div class="product-txt">
@@ -187,7 +190,8 @@
         </div>
     </main>
 
-    
-                    <script src="../js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>      
+<script src="../js/scripts.js" defer></script>
+                    
 </body>
 </html>

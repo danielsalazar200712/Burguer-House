@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
@@ -15,14 +19,8 @@ body {
 
 .container {
     max-width: 1200px;
-    margin:auto;
-
+    margin: 0 auto;
 }
-.menu-container {
-    position: absolute;
-    display: inline-block;
-}
-
 
 .swiper-button-prev::after {
     font-size: 25px;
@@ -48,7 +46,10 @@ body {
 }
 
 .menu {
-    position: absolute;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     top: 20px;
     left: 0;
     right: 0;
@@ -68,6 +69,9 @@ body {
     margin-left: 180px;
     display: flex;
     align-items: center;
+    display: flex !important;
+    justify-content: center;
+
 }
 
 .logo-1 {
@@ -141,7 +145,7 @@ body {
     width: 50%;
 }
 .slider-txt h1 {
-    font-size: 70px;
+    font-size: clamp(30px, 5vw, 70px);
     color: #FFFFFF;
     text-transform: uppercase;
     font-weight: 800;
@@ -179,19 +183,26 @@ body {
 .slider-img img {
     margin-right: 225px;
     width: 550px;
+    max-width: 100%;
+    height: auto;
 }
 
+
 .products {
-    background-color: #0d0d0d;
+    background-color: #090909;
 }
+    
+
 
 .tabs {
     display: flex;
     flex-wrap: wrap;
     padding: 100px 0px;
+
 }
 
 .tabs label {
+    cursor: pointer;
     width: 15%;
     order: 1;
     display: block;
@@ -217,8 +228,10 @@ body {
     display: none;
 }
 .tabs input[type="radio"]:checked + label {
-    border-bottom: 2px solid #DB241B;
+    border-bottom: 2px solid #f71206;
     color: #FFFFFF;
+    border-radius: 88px;
+    
 }
 
 .tabs input[type="radio"]:checked + label + .tab {
@@ -226,12 +239,15 @@ body {
 } 
 
 .product {
-    display: flex;
     align-items: center;
     padding: 25px;
     margin: 0 10px;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+
+
 
 .product-img {
     width: 50%;
@@ -404,7 +420,8 @@ body {
     }
 
     .logo-2 {
-        width: 0;
+        width: 150px;
+        
     }
 
     .menu label {
@@ -566,3 +583,9 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.logo-2 {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto; /* Centra el logo */
+}

@@ -47,4 +47,3 @@ tabInputs.forEach(function(input) {
     })
 
 });
-

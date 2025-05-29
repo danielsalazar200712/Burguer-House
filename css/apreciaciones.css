@@ -4,10 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
@@ -46,10 +42,7 @@ body {
 }
 
 .menu {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
+    position: absolute;
     top: 20px;
     left: 0;
     right: 0;
@@ -69,9 +62,6 @@ body {
     margin-left: 180px;
     display: flex;
     align-items: center;
-    display: flex !important;
-    justify-content: center;
-
 }
 
 .logo-1 {
@@ -91,7 +81,6 @@ body {
     width: 40px;
     border: 1px solid #DB241B;
     border-radius: 50%;
-    position: left;
 }
 
 .social:hover {
@@ -146,7 +135,7 @@ body {
     width: 50%;
 }
 .slider-txt h1 {
-    font-size: clamp(30px, 5vw, 70px);
+    font-size: 70px;
     color: #FFFFFF;
     text-transform: uppercase;
     font-weight: 800;
@@ -184,10 +173,7 @@ body {
 .slider-img img {
     margin-right: 225px;
     width: 550px;
-    max-width: 100%;
-    height: auto;
 }
-
 
 .products {
     background-color: #090909;
@@ -240,15 +226,12 @@ body {
 } 
 
 .product {
+    display: flex;
     align-items: center;
     padding: 25px;
     margin: 0 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
 }
-
-
-
 
 .product-img {
     width: 50%;
@@ -346,7 +329,23 @@ body {
     background-color: #ab1c15;
  }
 
- 
+ .horario {
+    padding: 100px 0px;
+    background-color: #0d0d0d;
+ }
+
+ .horario-info h2 {
+    font-size: 75px;
+    color: #FFFFFF;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+ }
+
+ .horario-txt {
+    display: flex;
+    justify-content: space-between;
+ }
 
  .txt {
     color: #FFFFFF;
@@ -366,7 +365,9 @@ body {
  }
 
 
- 
+ .map {
+    filter: grayscale(100%) invert(92%) contrast(93%);
+ }
 
  .footer {
     padding: 100px 0px;
@@ -402,7 +403,10 @@ body {
         width: 100px;
     }
 
-    
+    .logo-2 {
+        width: 0;
+    }
+
     .menu label {
         display: initial;
     }
@@ -469,22 +473,95 @@ body {
     .swiper-pagination-fraction {
         bottom: -7px;
     }
-.logo-2{
-    top: 20px;
-    width: 150px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    display:flex;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
 
+    .tabs {
+        padding: 50px 30px;
+    }
+
+    .tabs label {
+        width: 33%;
+    }
+
+    .info {
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .info-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-img img {
+        width: 400px;
+        height: 200px;
+        margin-bottom: 25px;
+    }
+
+    .info-txt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-txt h2 {
+        font-size: 50px;
+    }
+
+    .info-txt p {
+        font-size: 16px;
+    }
+
+    .btn-1 {
+        font-size: 16px;
+    }
+
+    .horario {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .horario-info h2 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .horario-txt {
+        flex-direction: column;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .social img {
+        margin: 8px 0 0 0;
+    }
+
+    .footer {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links h4 {
+        margin: 25px 0px 10px 0px;
+    }
+
+
+
+ }
+ .map {
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+ }
+ @media (max-width: 768px) {
     
-    
+    .contenedor {
+        flex-direction: column;
+    }
 }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-    
