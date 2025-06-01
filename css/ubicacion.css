@@ -58,6 +58,7 @@ body {
     z-index: 1000;
 }
 
+
 .navbar {
     display: flex;
 }
@@ -99,6 +100,11 @@ body {
 
 .social img {
     margin: 8px 0 0 10px;
+    width: 24px; /* Ajusta el tamaño del icono */
+    height: 24px; /* Ajusta el tamaño del icono */
+    position: relative;
+    transition: transform 0.3s ease; /* Añade una transición suave */
+
 }
 
 .menu .navbar ul li {
@@ -123,6 +129,19 @@ body {
 
 .menu-icono {
     width: 25px;
+    position:fixed;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
+    right: 20px; /* Distancia desde el lado derecho */
+    z-index: 1001; /* Asegúrate de que el icono esté por encima de otros elementos */
+
 }
 
 .menu label {
@@ -133,6 +152,7 @@ body {
 .header-content {
     margin-top: 200px;
     padding-bottom: 50px;
+   position: fixed;
 }
 
 .slider {
@@ -151,10 +171,6 @@ body {
     font-weight: 800;
 }
 
-.slider-txt p {
-    font-size: 18px;
-    color: #A7A7A7;
-}
 
 .botones {
     margin-top: 50px;
@@ -180,17 +196,10 @@ body {
     width: 50%;
 }
 
-.slider-img img {
-    margin-right: 225px;
-    width: 550px;
-    max-width: 100%;
-    height: auto;
-}
 
 
-.products {
-    background-color: #090909;
-}
+
+
     
 
 
@@ -238,66 +247,16 @@ body {
     display: block;
 } 
 
-.product {
-    align-items: center;
-    padding: 25px;
-    margin: 0 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
 
 
 
 
-.product-img {
-    width: 50%;
-    text-align: left;
-}
 
-.product-img h4 {
-    display: inline-block;
-    padding: 5px 7px;
-    line-height: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 800;
-    border: 2px solid #555555;
-    border-radius: 10px;
-    margin-bottom: 50px;
-}
 
-.product-img img {
-    width: 150px;
-    height: 120px;
- }
 
- .product-txt {
-    width: 50%;
-    margin-left: 10px;
-    text-align: left;
- }
 
- .product-txt h4 {
-    color: #FFFFFF;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-bottom: 5px;
- }
 
- .product-txt p {
-    color: #A7A7A7;
-    font-size: 16px;
-    margin-bottom: 15px;
- }
-
- .product-txt span {
-    color: #FFFFFF;
-    font-size: 18px;
-    font-weight: 800;
- }
-
+ 
  .info {
     padding: 100px 0px;
     display: flex;
@@ -345,23 +304,7 @@ body {
     background-color: #ab1c15;
  }
 
- .horario {
-    padding: 100px 0px;
-    background-color: #0d0d0d;
- }
 
- .horario-info h2 {
-    font-size: 75px;
-    color: #FFFFFF;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 50px;
- }
-
- .horario-txt {
-    display: flex;
-    justify-content: space-between;
- }
 
  .txt {
     color: #FFFFFF;
@@ -571,6 +514,8 @@ body {
     width: 100%;
     height: 400px;
     margin-top: 50px;
+    padding-top: 20px;
+    po
  }
  @media (max-width: 768px) {
     
@@ -578,14 +523,5 @@ body {
         flex-direction: column;
     }
 }
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
 
-.logo-2 {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto; /* Centra el logo */
-}
+

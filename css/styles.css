@@ -15,11 +15,22 @@
 body {
     background-color: #080202;
     font-family: 'Poppins', sans-serif;
+    padding: auto;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    max-height: 100px;
+    
 }
 
 .swiper-button-prev::after {
@@ -30,19 +41,19 @@ body {
 }
 
 .swiper-button-next {
-    color: #DB241B;
+    color: #f51004;
 }
 .swiper-button-prev {
-    color: #DB241B;
+    color: #f51004;
 }
 
 .swiper-pagination-bullet {
-    background-color: #D3D2D2;
+    background-color: #f3e5e5;
     opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #DB241B;
+    background-color: #f41c08;
 }
 
 .menu {
@@ -50,12 +61,11 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    top: 20px;
-    left: 0;
-    right: 0;
     display: flex;
-    justify-content: center;
-    z-index: 1000;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px;
+    z-index: 1000; 
 }
 
 .navbar {
@@ -77,6 +87,7 @@ body {
 .logo-1 {
     width: 0;
 }
+
 .logo-2 {
     width: 150px;
 }
@@ -149,7 +160,7 @@ body {
     font-size: clamp(30px, 5vw, 70px);
     color: #FFFFFF;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 800;   
 }
 
 .slider-txt p {
@@ -401,6 +412,10 @@ body {
     .logo-1 {
         width: 100px;
     }
+    .logo-2 {
+        width: 0;
+        top: 20px;
+    }
 
     
     .menu label {
@@ -469,22 +484,6 @@ body {
     .swiper-pagination-fraction {
         bottom: -7px;
     }
-.logo-2{
-    top: 20px;
-    width: 150px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    display:flex;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
 
-    
-    
-}
 }
     

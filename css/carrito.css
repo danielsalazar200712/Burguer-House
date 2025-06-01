@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+body {
+    background-color: #080202;
+    font-family: 'Poppins', sans-serif;
+}
+#carrito { 
+    position:absolute;
+    top: 100px;
+    right:500px;
+    background: rgb(19, 18, 18);
+    padding: 200px;
+    box-shadow: 0px 4px 8px rgba(251, 251, 251, 0.3);
+    border-radius: 8px;
+    border: #D3D2D2;
+    border-radius: 12px;
+    text-align: center;
+    color: #f90e0e;
+}
+.comprar-button {
+    background-color: #f90e0e;
+    color: rgb(245, 233, 233);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    ;
+}
+
+.producto {
+    border: 1px solid #131212;
+    padding: 10px;
+    margin: 10px;
+}

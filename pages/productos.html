@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>productos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/productos.css">
@@ -24,12 +25,14 @@
                         <li><a href="../pages/productos.html">Productos</a></li>
                         <li><a href="../pages/horarios.html">Horarios</a></li>
                         <li><a href="../pages/ubicacion.html">Ubicación</a></li>
-                        <li><a href="../pages/apreciaciones.html">Apreciaciones</a></li>
                     </ul>
                 </div>
-    </header>
-    
+                
 
+    </header>
+     <button  class="carrito"><a href="http://127.0.0.1:3000/pages/carrito.html">🛒</a></button>
+
+    <div id="notificacion" class="oculto">✅ Añadido con éxito!</div>
 
     <main class="products">
         <div class="tabs container">
@@ -42,39 +45,39 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4><button onclick="agregarAlCarrito(this)">Añadir al carrito</button></h4>
+                                    <h4><button class="añadir" onclick="agregarAlCarrito('Double Cheese', 32900)">Añadir al carrito</button></h4>
                                     <img src="../images/food1.png" alt="">
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Producto</h4>
+                                    <h4>Double Cheese</h4>
                                     <p>calidad premium</p>
-                                    <span class="price">$80.00</span>
+                                    <span class="price">$32.900</span>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4><button><a href="">añadir al carrito</a></button></h4>
+                                    <h4> <button class="añadir" onclick="agregarAlCarrito('Sandwich submarino', 27900)">Añadir al carrito</button></h4>
                                     <img src="../images/food2.png" alt="">
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Producto</h4>
+                                    <h4>Sandwich submarino</h4>
                                     <p>calidad premium</p>
-                                    <span class="price">$80.00</span>
+                                    <span class="price">$27.900</span>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4><button><a href="">añadir al carrito</a></button></h4>
+                                    <h4><button class="añadir" onclick="agregarAlCarrito('chicken Sandwich', 19900)">Añadir al carrito</button></button></h4>
                                     <img src="../images/food3.png" alt="">
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Producto</h4>
+                                    <h4>chicken sandwich</h4>
                                     <p>calidad premium</p>
-                                    <span class="price">$80.00</span>
+                                    <span class="price">$19.900</span>
                                 </div>
                             </div>
                         </div>
@@ -93,39 +96,39 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4><button><a href="">añadir al carrito</a></button></h4>
+                                    <h4><button class="añadir" onclick="agregarAlCarrito('Burrito Paisa', 13900)">Añadir al carrito</button></h4>
                                     <img src="../images/food4.png" alt="">
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Producto</h4>
+                                    <h4>Burrito paisa</h4>
                                     <p>calidad premium</p>
-                                    <span class="price">$80.00</span>
+                                    <span class="price">$13.900</span>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4><button><a href="">añadir al carrito</a></button></h4>
+                                    <h4><button class="añadir" onclick="agregarAlCarrito('Salad Burrito', 14900)">Añadir al carrito</button></h4>
                                     <img src="../images/food5.png" alt="">
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Producto</h4>
+                                    <h4>Salad Burrito</h4>
                                     <p>calidad premium</p>
-                                    <span class="price">$80.00</span>
+                                    <span class="price">$14.900</span>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4><button><a href="">añadir al carrito</a></button></h4>
+                                    <h4><button class="añadir" onclick="agregarAlCarrito('Mixed Burrito', 12900)">Añadir al carrito</button></h4>
                                     <img src="../images/food6.png" alt="">
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Producto</h4>
+                                    <h4>Mixed Burrito</h4>
                                     <p>calidad premium</p>
-                                    <span class="price">$80.00</span>
+                                    <span class="price">$12.500</span>
                                 </div>
                             </div>
                         </div>
@@ -143,39 +146,39 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4><button><a href="">añadir al carrito</a></button></h4>
+                                    <h4><button class="añadir" onclick="agregarAlCarrito('Fish with salad', 24900)">Añadir al carrito</button></h4>
                                     <img src="../images/food7.png" alt="">
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Producto</h4>
+                                    <h4>fish with salad</h4>
                                     <p>calidad premium</p>
-                                    <span class="price">$80.00</span>
+                                    <span class="price">$24.900</span>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4><button><a href="">añadir al carrito</a></button></h4>
+                                    <h4><button class="añadir" onclick="agregarAlCarrito('Chuzo', 27900)">Añadir al carrito</button></h4>
                                     <img src="../images/food8.png" alt="">
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Producto</h4>
+                                    <h4>Chuzo</h4>
                                     <p>calidad premium</p>
-                                    <span class="price">$80.00</span>
+                                    <span class="price">$27.900</span>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="product-img">
-                                    <h4><button><a href="">añadir al carrito</a></button></h4>
+                                    <h4><button class="añadir" onclick="agregarAlCarrito('Pizza', 39900)">Añadir al carrito</button></h4>
                                     <img src="../images/food9.png" alt="">
                                 </div>
                                 <div class="product-txt">
-                                    <h4>Producto</h4>
+                                    <h4>Pizza</h4>
                                     <p>calidad premium</p>
-                                    <span class="price">$80.00</span>
+                                    <span class="price">$39.900</span>
                                 </div>
                             </div>
                         </div>
@@ -189,6 +192,44 @@
 
         </div>
     </main>
+    <footer class="footer container">
+
+        <img class="logo-2" src="images/logo.svg" alt="">
+        <div class="links">
+            <h4>Burguer House</h4>
+            <ul>
+                <li><a href="#">legal</a></li>
+                <li><a href="#">ayuda</a></li>
+                <li><a href="#">politicas </a></li>
+                <li><a href="#">certificaciones</a></li>
+            </ul>
+        </div>
+        
+        <div class="links">
+            <h4>nuestras sedes</h4>
+            <ul>
+                <li><a href="#">La Ceja Antioquia</a></li>
+                <li><a href="#">Abejorral Antioquia</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>siguenos en redes</h4>
+            <div class="socials">
+                <a href="#">
+                    <div class="social">
+                        <img src="../images/s1.svg" alt="">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="social">
+                        <img src="../images/s3.svg" alt="">
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>      
 <script src="../js/scripts.js" defer></script>

@@ -1,5 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+#carrito {
+    position: ;
+    top: 150px;
+    right: 20px;
+    background: rgb(250, 9, 9);
+    padding: 0px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: #D3D2D2;
+    border-radius: 12px;
+}
 
+.producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -389,6 +404,7 @@ body {
     padding: 100px 0px;
     display: flex;
     justify-content: space-between;
+    gap: 50px;
  }
 
  .links h4 { 

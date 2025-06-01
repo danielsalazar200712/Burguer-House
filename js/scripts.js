@@ -47,3 +47,22 @@ tabInputs.forEach(function(input) {
     })
 
 });
+
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.push({ nombre, precio });
+    localStorage.setItem("carrito", JSON.stringify(carrito)); // Guarda los productos correctamente
+}
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.push({ nombre, precio });
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    let notificacion = document.getElementById("notificacion");
+    notificacion.textContent = `✅ ${nombre} añadido con éxito!`;
+    notificacion.style.display = "block";
+
+    setTimeout(() => {
+        notificacion.style.display = "none";
+    }, 2000); // Desaparece después de 2 segundos
+}

@@ -198,9 +198,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 100px 0px;
-    background-color: #030303;
+    background-color: #0c0c0c;
     text-align: center;
-    text position: absolute;
+    text position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
 
 
 }
@@ -218,6 +222,14 @@ body {
     font-size: 18px;
     text-transform: uppercase;
     transition: ease 0.2s;
+    display: flex;
+    flex-direction: column; /* O row si los quieres en fila */
+    align-items: center; /* Ajusta según la necesidad */
+    gap: 10px; /* Espacio entre subtítulos */
+
+
+
+
 }
 
 .tabs .tab {
@@ -240,15 +252,40 @@ body {
 
 .tabs input[type="radio"]:checked + label + .tab {
     display: block;
-} 
+}
 
-.product {
+
+    
+.carrito{
+    position: absolute;
+    top: 172px;
+    left: 170px;
+    background-color: #de0202;
+    width: 50px;
+    height: 50px;
+    z-index:100;
+    
+}
+
+
+
+
+.producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.product {    
     align-items: center;
-    padding: 25px;
+    padding: 100px;
     margin: 0 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+    
 
 
 
@@ -256,24 +293,32 @@ body {
 .product-img {
     width: 50%;
     text-align: left;
+    
 }
 
 .product-img h4 {
     display: inline-block;
-    padding: 5px 7px;
+    padding: 5px 9px;
     line-height: 15px;
-    color: #FFFFFF;
+    color: #121111;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 800;
-    border: 2px solid #555555;
+    border: 2px solid #f9f5f5;
     border-radius: 10px;
     margin-bottom: 50px;
+    font-family: cursive;
+    background-color: rgb(209, 10, 10);
 }
+
 
 .product-img img {
     width: 150px;
     height: 120px;
+    align-content: center;
+    display: flex;
+    float: unset;
+    
  }
 
  .product-txt {
@@ -283,11 +328,13 @@ body {
  }
 
  .product-txt h4 {
-    color: #FFFFFF;
+    color: #f00707;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: 5px;
+    align-self: center;
+
  }
 
  .product-txt p {
@@ -596,4 +643,28 @@ button {
 
 button:hover {
     transform: scale(1.1);
+}
+.añadir {
+    background-color: rgb(209, 10, 10);;
+    color: #FFFFFF;
+    padding: px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+#notificacion {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgb(250, 248, 248);
+    color: rgb(238, 9, 9);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.oculto {
+    display: none;
 }
