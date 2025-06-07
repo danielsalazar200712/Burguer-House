@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>carrito</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <title>Carrito</title>
     <link rel="stylesheet" href="../css/carrito.css">
-    <link rel="icon" type="image/.png" href="../images/favicon.png">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
 </head>
 <body>
-   <div id="carrito">
-    <h2>🛒 Carrito de Compras</h2>
-    <ul id="lista-carrito"></ul>
-    <p>Total: <span id="total-carrito">0</span></p>
-    <button class="comprar-button" onclick="enviarWhatsApp()">Comprar</button>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>      
-<script src="../js/carrito.js" defer></script>
 
-</div> 
+    <div id="carrito">
+        <h2>🛒 Carrito de Compras</h2>
+        <ul class="lista" id="lista-carrito"></ul>
+        <p class="total">Total: $ <span id="total-carrito">0</span></p>
+        <button class="comprar-button" onclick="enviarWhatsApp()">Comprar</button>
+        <button class="vaciar-button" id="vaciarCarrito">Vaciar Carrito</button>
+        <button class="atras">
+        <a href="../pages/productos.html"><h3 class="productos">Ir a productos</h3></a>
+    </button>
+    </div>
+    
+
+
+    <script src="../js/carrito.js" defer></script>
 </body>
 </html>

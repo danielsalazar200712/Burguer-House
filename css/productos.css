@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-* {
-    margin: 0;
+* {margin: 0;
     padding: 0;
     box-sizing: border-box;
 
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
@@ -16,7 +16,6 @@ body {
     background-color: #080202;
     font-family: 'Poppins', sans-serif;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -36,17 +35,8 @@ body {
     color: #DB241B;
 }
 
-.swiper-pagination-bullet {
-    background-color: #D3D2D2;
-    opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #DB241B;
-}
-
 .menu {
-    position: fixed;
+    position:absolute;
     width: 100%;
     top: 0;
     left: 0;
@@ -72,13 +62,6 @@ body {
     display: flex !important;
     justify-content: center;
 
-}
-
-.logo-1 {
-    width: 0;
-}
-.logo-2 {
-    width: 150px;
 }
 
 .socials {
@@ -109,12 +92,12 @@ body {
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
-    color: #FFFFFF;
+    color: #fb0606;
     display: block;
 }
 
 .menu .navbar ul li a:hover {
-    color: #DB241B;
+    color: #f4f1f1;
 }
 
 #menu {
@@ -204,20 +187,24 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    
-
 
 }
 
+
+
+
 .tabs label {
+    flex-direction: column;
+        align-items: center;
+
     cursor: pointer;
     width: 15%;
     order: 1;
     display: block;
-    padding: 20px 0;
+    padding: 25px;
     text-align: center;
     cursor: pointer;
-    color: #A7A7A7;
+    color: #fbf4f4;
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
@@ -226,11 +213,13 @@ body {
     flex-direction: column; /* O row si los quieres en fila */
     align-items: center; /* Ajusta según la necesidad */
     gap: 10px; /* Espacio entre subtítulos */
-
-
-
+    font-family: inherit; /* Mantiene la fuente actual */
+    -webkit-text-stroke: 1px rgba(252, 251, 248, 0.427);
 
 }
+
+
+
 
 .tabs .tab {
     order: 99;
@@ -257,18 +246,17 @@ body {
 
     
 .carrito{
-    position: absolute;
-    top: 172px;
+    position:absolute;
+    top: 200px;
     left: 170px;
     background-color: #de0202;
     width: 50px;
     height: 50px;
     z-index:100;
+    border-radius: 15px;
+    cursor: pointer;
     
 }
-
-
-
 
 .producto {
     border: 1px solid #ccc;
@@ -285,14 +273,12 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-    
-
-
-
-
 .product-img {
     width: 50%;
     text-align: left;
+    transform: translateX(-23px);
+    position: relative;
+    left: -23px;
     
 }
 
@@ -313,17 +299,21 @@ body {
 
 
 .product-img img {
-    width: 150px;
+    width: 130px;
     height: 120px;
-    align-content: center;
+    align-content:left;
     display: flex;
-    float: unset;
-    
- }
+    float: left;
+    display: flex;
+    justify-content: left; /* Ensures alignment */
+    align-items: center; /* Centers image vertically */
+}
 
- .product-txt {
+
+.product-txt {
+    position:absolute;
     width: 50%;
-    margin-left: 10px;
+    margin-left: 60px;
     text-align: center;
  }
 
@@ -336,9 +326,10 @@ body {
     align-self: center;
 
  }
+ 
 
  .product-txt p {
-    color: #A7A7A7;
+    color: #a4a2a2;
     font-size: 16px;
     margin-bottom: 15px;
  }
@@ -586,19 +577,6 @@ body {
         font-size: 16px;
     }
 
-    .horario {
-        padding: 30px;
-        text-align: center;
-    }
-
-    .horario-info h2 {
-        font-size: 50px;
-        margin-bottom: 15px;
-    }
-
-    .horario-txt {
-        flex-direction: column;
-    }
 
     .socials {
         justify-content: center;
@@ -619,14 +597,8 @@ body {
     }
 
 
-
  }
- .map {
-    width: 100%;
-    height: 400px;
-    margin-top: 50px;
-    top: 100px;
- }
+ 
  @media (max-width: 768px) {
     
     .contenedor {
@@ -656,9 +628,9 @@ button:hover {
 }
 #notificacion {
     position: fixed;
-    top: 20px;
+    top: 100px;
     right: 20px;
-    background: rgb(250, 248, 248);
+    background: rgb(9, 9, 9);
     color: rgb(238, 9, 9);
     padding: 10px;
     border-radius: 5px;
@@ -668,3 +640,4 @@ button:hover {
 .oculto {
     display: none;
 }
+

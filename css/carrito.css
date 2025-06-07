@@ -3,18 +3,39 @@ body {
     background-color: #080202;
     font-family: 'Poppins', sans-serif;
 }
-#carrito { 
-    position:absolute;
+#carrito {  
     top: 100px;
     right:500px;
     background: rgb(19, 18, 18);
-    padding: 200px;
+    padding: 20px;
     box-shadow: 0px 4px 8px rgba(251, 251, 251, 0.3);
     border-radius: 8px;
     border: #D3D2D2;
     border-radius: 12px;
     text-align: center;
     color: #f90e0e;
+}
+.lista{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    background-color: rgb(239, 11, 11);
+    color: #131212;
+    border-radius: 8px;
+}
+.total{
+    font-weight: bold;
+    color: #f5ebeb;
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: #514747;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: inherit; /* Mantiene la fuente actual */
+    color: rgb(17, 17, 17);
+    -webkit-text-stroke: 1px red;
+
 }
 .comprar-button {
     background-color: #f90e0e;
@@ -25,9 +46,58 @@ body {
     font-size: 16px;
     ;
 }
+.comprar-button:hover{
+    background-color: rgb(249, 248, 247);
+    color: #080202;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 3.);
+    transition: all .3s ease-in-out;
+}
 
 .producto {
     border: 1px solid #131212;
     padding: 10px;
     margin: 10px;
+}
+.atras {
+
+    padding: 0px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #eab31c;
+    color: #131212;
+    text-decoration: none !important; /* Usa !important para forzar la eliminación */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.atras:hover {
+    background-color: #aca9a3;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none !important; /* Asegura que también desaparezca al hacer hover */
+}
+.productos{
+    color: rgb(8, 8, 8);
+}
+.lista{
+    text-align: center;
+}
+.vaciar-button{
+    background-color: #0b0b0b;
+    color: rgb(235, 7, 7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    ; 
+}
+.vaciar-button:hover{
+    background-color: rgb(249, 248, 247);
+    color: #080202;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 3.);
+    transition: all .3s ease-in-out;
 }

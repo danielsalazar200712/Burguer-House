@@ -1,48 +1,45 @@
+// Recuperar carrito desde localStorage
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-let total = carrito.reduce((acc, item) => acc + item.precio, 0);
 
+// Guardar carrito en localStorage
+const guardarCarrito = () => localStorage.setItem("carrito", JSON.stringify(carrito));
+
+// Función para actualizar la vista del carrito
 function actualizarCarrito() {
     const lista = document.getElementById("lista-carrito");
     const totalElemento = document.getElementById("total-carrito");
 
-    lista.innerHTML = "";
-    carrito.forEach((item, index) => {
-        const li = document.createElement("li");
-        li.textContent = `${item.nombre} - $${item.precio}`;
+    if (!lista || !totalElemento) return;
 
-        // Botón para eliminar productos
-        const botonEliminar = document.createElement("button");
-        botonEliminar.textContent = "❌";
-        botonEliminar.onclick = function () {
-            eliminarDelCarrito(index);
-        };
+    lista.innerHTML = carrito.map(item => `
+        <li>${item.nombre} - $${item.precio.toLocaleString('es-CO')}</li>
+    `).join('');
 
-        li.appendChild(botonEliminar);
-        lista.appendChild(li);
-    });
+    totalElemento.textContent = `$${carrito.reduce((acc, item) => acc + item.precio, 0).toLocaleString('es-CO')}`;
 
-    totalElemento.textContent = total;
+    guardarCarrito();
 }
 
-function eliminarDelCarrito(index) {
-    total -= carrito[index].precio;
-    carrito.splice(index, 1);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+// Vaciar el carrito completamente
+document.getElementById('vaciarCarrito').addEventListener('click', () => {
+    carrito = [];
+    localStorage.removeItem('carrito');
     actualizarCarrito();
-}
+    alert('El carrito ha sido vaciado.');
+});
 
+// Enviar pedido por WhatsApp
 function enviarWhatsApp() {
-    let numeroWhatsApp = "573017116153";
-    let mensaje = "Hola, quiero comprar:\n";
+    const numeroWhatsApp = "573017116153";
+    const mensaje = `Hola, quiero comprar:\n${
+        carrito.map(item => `- ${item.nombre} ($${item.precio.toLocaleString('es-CO')})`).join('\n')
+    }\nTotal: $${carrito.reduce((acc, item) => acc + item.precio, 0).toLocaleString('es-CO')}`;
 
-    carrito.forEach((item) => {
-        mensaje += `- ${item.nombre} ($${item.precio})\n`;
-    });
-
-    mensaje += `Total: $${total}`;
-
-    let url = `https://wa.me/${3017116153}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
+    window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
 
-actualizarCarrito();
+// Cargar carrito al inicio y mantener cantidad de productos
+document.addEventListener("DOMContentLoaded", () => {
+    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    actualizarCarrito(); // Esto asegura que los productos y el contador se mantengan al regresar a la página
+});
