@@ -1,9 +1,3 @@
-
-
-
-
-
-// 🏞️ Swiper.js - Configuración de carruseles
 var swiper1 = new Swiper(".mySwiper-1", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -40,12 +34,11 @@ var swiper2 = new Swiper(".mySwiper-2", {
     }
 });
 
-// 🔄 Actualización de Swiper según el tab seleccionado
 let tabInputs = document.querySelectorAll(".tabInput");
 
 tabInputs.forEach(function(input) {
     input.addEventListener("change", function() {
-        let id = input.value; // Cambio aquí, usar .value en lugar de ariaValueMax
+        let id = input.value; 
         let thisSwiper = document.getElementById("swiper" + id);
         thisSwiper.swiper.update();
     });

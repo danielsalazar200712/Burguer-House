@@ -59,22 +59,21 @@ body {
     padding: 10px;
     margin: 10px;
 }
-.atras {
-
+.atras{
+    text-decoration:none;
     padding: 0px 0px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    background-color: #eab31c;
-    color: #131212;
-    text-decoration: none !important; /* Usa !important para forzar la eliminación */
-    border-radius: 10px;
+    font-size: 12px;
+    background-color: rgba(203, 163, 18, 0.962);
+    color: rgb(40, 70, 70);
+    border-radius: 9px;
     transition: all 0.3s ease-in-out;
     
 }
 
 .atras:hover {
-    background-color: #aca9a3;
+    background-color: #fbf9f9;
     transform: scale(1.1);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     text-decoration: none !important; /* Asegura que también desaparezca al hacer hover */

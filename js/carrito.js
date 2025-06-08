@@ -26,13 +26,13 @@ document.getElementById('vaciarCarrito').addEventListener('click', () => {
     localStorage.removeItem('carrito');
     actualizarCarrito();
     alert('El carrito ha sido vaciado.');
-});
+        });
 
 // Enviar pedido por WhatsApp
 function enviarWhatsApp() {
     const numeroWhatsApp = "573017116153";
     const mensaje = `Hola, quiero comprar:\n${
-        carrito.map(item => `- ${item.nombre} ($${item.precio.toLocaleString('es-CO')})`).join('\n')
+        carrito.map(item => `- ${item.nombre} ($${item.precio.toLocaleString('es-CO')})`).join('\n') 
     }\nTotal: $${carrito.reduce((acc, item) => acc + item.precio, 0).toLocaleString('es-CO')}`;
 
     window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`, "_blank");
@@ -42,4 +42,5 @@ function enviarWhatsApp() {
 document.addEventListener("DOMContentLoaded", () => {
     carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     actualizarCarrito(); // Esto asegura que los productos y el contador se mantengan al regresar a la página
+    initMap(); // Inicializar Google Maps al cargar la página
 });
